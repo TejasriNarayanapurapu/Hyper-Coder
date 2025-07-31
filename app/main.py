@@ -3,6 +3,8 @@ import sys
 import os
 import openai
 
+github_token = os.getenv("GITHUB_TOKEN", "")
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 from agent.tools.github_reader import get_github_issue, get_readme
 from agent.config import OPENAI_API_KEY
